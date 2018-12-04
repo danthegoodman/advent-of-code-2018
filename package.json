@@ -1,10 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "@types/chai": "^4.1.7",
     "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.11",
-    "chai": "^4.2.0",
     "lodash": "^4.17.11",
     "typescript": "^3.2.1"
   }

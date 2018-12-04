@@ -1,17 +1,17 @@
+import * as assert from "assert";
 import { readFileSync } from "fs";
 import _ = require("lodash");
-import { expect } from 'chai';
 
 function main() {
   const inputFile = readFileSync(__dirname + "/input.txt", 'utf8').trim();
   const exampleA = "abcdef bababc abbcde abcccd aabcdd abcdee ababab";
 
-  expect(solveA(exampleA)).to.equal(12);
+  assert.strictEqual(solveA(exampleA), 12);
   console.log("A:", solveA(inputFile));
 
   const exampleB = "abcde fghij klmno pqrst fguij axcye wvxyz";
 
-  expect(solveB(exampleB)).to.equal("fgij");
+  assert.strictEqual(solveB(exampleB), "fgij");
   console.log("B:", solveB(inputFile));
 }
 

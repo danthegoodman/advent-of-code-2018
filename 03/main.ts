@@ -1,5 +1,5 @@
+import * as assert from "assert";
 import { readFileSync } from "fs";
-import { expect } from 'chai';
 
 function main() {
   const input = readFileSync(__dirname + "/input.txt", 'utf8').trim();
@@ -9,10 +9,10 @@ function main() {
       "#3 @ 5,5: 2x2";
 
 
-  expect(solveA(example)).to.equal(4);
+  assert.strictEqual(solveA(example), 4);
   console.log("A:", solveA(input));
 
-  expect(solveB(example)).to.equal(3);
+  assert.strictEqual(solveB(example), 3);
   console.log("B:", solveB(input));
 }
 

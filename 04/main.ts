@@ -1,5 +1,5 @@
+import * as assert from "assert";
 import { readFileSync } from "fs";
-import { expect } from 'chai';
 import _ = require("lodash");
 
 function main() {
@@ -23,10 +23,10 @@ function main() {
       "[1518-11-05 00:45] falls asleep\n" +
       "[1518-11-05 00:55] wakes up";
 
-  expect(solveA(example)).to.equal(240);
+  assert.strictEqual(solveA(example), 240);
   console.log("A:", solveA(input));
 
-  expect(solveB(example)).to.equal(4455);
+  assert.strictEqual(solveB(example), 4455);
   console.log("B:", solveB(input));
 }
 
@@ -99,6 +99,6 @@ function solveB(input: string) {
     return {guard: times[0].guard, minute: Number(mostCommonPair[0]), times: mostCommonPair[1]};
   });
 
-  let mostSleepingMinute = _.maxBy(guardsMostSleepingMinute, it=>it.times)!;
+  let mostSleepingMinute = _.maxBy(guardsMostSleepingMinute, it => it.times)!;
   return mostSleepingMinute.guard * mostSleepingMinute.minute
 }
