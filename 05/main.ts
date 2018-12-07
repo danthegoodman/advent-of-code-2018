@@ -1,6 +1,5 @@
 import * as assert from "assert";
 import { readFileSync } from "fs";
-import LinkedList = require('linked-list');
 
 function main() {
   const input = readFileSync(__dirname + "/input.txt", 'utf8').trim();
@@ -27,27 +26,15 @@ function oppositeCase(char: string) {
 }
 
 function solveA(input: string) {
-  let list = LinkedList.from(Array.from(input, it => {
-    let item = new LinkedList.Item();
-    item.value = it;
-    return item;
-  }));
-
-  let ndx = 0;
-  let node = list.head;
-  while(node){
-    if(node.prev && node.prev.value === oppositeCase(node.value)){
-      let finalNode = node.next;
-      node.prev.detach();
-      node.detach();
-      node = finalNode;
-      ndx -= 1;
-    } else {
-      node = node.next;
-      ndx += 1;
+  let list = [];
+  for (let c of input) {
+    list.push(c);
+    if (list[list.length - 2] && list[list.length - 2] === oppositeCase(c)) {
+      list.pop();
+      list.pop();
     }
   }
-  return ndx;
+  return list.length;
 }
 
 function solveB(srcInput: string) {
