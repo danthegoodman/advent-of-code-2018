@@ -12,6 +12,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.11.tgz#715c476c99a5f6898a1ae61caf9825e43c03912e"
   integrity sha512-3iIOhNiPGTdcUNVCv9e5G7GotfvJJe2pc9w2UgDXlUwnxSZ3RgcUocIU+xYm+rTU54jIKih998QE4dMOyMN1NQ==
 
+linked-list@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/linked-list/-/linked-list-1.0.4.tgz#4119825c62d61a993fb080b7b98b3f677bac2d5b"
+  integrity sha512-li6CTL6EUxCDWGyq/dQjJeyKSQ7fAXly5qf9RQodBTQEsFRlfLVGEMyph4NhNEi5zWkYhTbqrx1C0RiCPf7c7Q==
+
 lodash@^4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
