@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AoC 2018 - Day 17</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+        #sidebar {
+            position: fixed;
+            width: 150px;
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #sidebar *{
+            margin: 1em 1em 0;
+        }
+        #canvas {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebar"></div>
+<canvas id="canvas"></canvas>
+
+<script>const exports = {}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+<script src="./input.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
